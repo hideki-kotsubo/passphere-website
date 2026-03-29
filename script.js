@@ -1,3 +1,6 @@
+// Copyright year
+document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
 // FAQ Accordion
 document.querySelectorAll('.faq-question').forEach(function (btn) {
   btn.addEventListener('click', function () {
