@@ -271,6 +271,98 @@ ul { list-style: none; }
   color: var(--text-light);
 }
 
+/* --- Sphere Visual --- */
+.sphere-visual {
+  position: relative;
+  width: 340px;
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Central glowing sphere */
+.sphere-core {
+  width: 100px;
+  height: 100px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), #6366f1);
+  box-shadow: 0 0 0 16px rgba(59,130,246,.1), 0 0 0 32px rgba(59,130,246,.05), 0 8px 32px rgba(59,130,246,.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  animation: sphere-pulse 3s ease-in-out infinite;
+}
+.sphere-core svg {
+  width: 40px;
+  height: 40px;
+  color: #fff;
+}
+
+@keyframes sphere-pulse {
+  0%, 100% { box-shadow: 0 0 0 16px rgba(59,130,246,.1), 0 0 0 32px rgba(59,130,246,.05), 0 8px 32px rgba(59,130,246,.4); }
+  50%       { box-shadow: 0 0 0 24px rgba(59,130,246,.12), 0 0 0 48px rgba(59,130,246,.06), 0 8px 40px rgba(59,130,246,.5); }
+}
+
+/* Orbit rings */
+.sphere-ring {
+  position: absolute;
+  border-radius: 999px;
+  border: 1px dashed rgba(59,130,246,.25);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.sphere-ring--1 {
+  width: 220px;
+  height: 220px;
+  animation: ring-rotate 12s linear infinite;
+}
+.sphere-ring--2 {
+  width: 320px;
+  height: 320px;
+  animation: ring-rotate 20s linear infinite reverse;
+}
+
+@keyframes ring-rotate {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Orbiting password pills */
+.orbit-pill {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: .35rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: .35rem .75rem .35rem .5rem;
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--text);
+  box-shadow: var(--shadow);
+  white-space: nowrap;
+  animation: pill-float 3s ease-in-out infinite;
+}
+.orbit-pill svg { color: var(--accent); flex-shrink: 0; }
+
+/* Position each pill around the sphere */
+.orbit-pill--1 { top: 8px;   left: 50%; transform: translateX(-50%); animation-delay: 0s; }
+.orbit-pill--2 { top: 50%;   right: 0;  transform: translateY(-50%); animation-delay: .5s; }
+.orbit-pill--3 { bottom: 8px; left: 50%; transform: translateX(-50%); animation-delay: 1s; }
+.orbit-pill--4 { top: 50%;   left: 0;   transform: translateY(-50%); animation-delay: 1.5s; }
+.orbit-pill--5 { top: 22%;   left: 4%;  animation-delay: .25s; }
+.orbit-pill--6 { bottom: 22%; right: 4%; animation-delay: .75s; }
+
+@keyframes pill-float {
+  0%, 100% { transform: translateY(0) translateX(var(--tx, 0)); }
+  50%       { transform: translateY(-6px) translateX(var(--tx, 0)); }
+}
+
 /* --- App Mockup --- */
 .hero-visual {
   display: flex;
