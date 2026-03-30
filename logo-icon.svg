@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#3b82f6" rx="96"/>
+  <!-- Sphere ring — the "sphere" in Passphere -->
+  <circle cx="256" cy="256" r="205" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="13"/>
+  <!-- Keyhole head -->
+  <circle cx="256" cy="190" r="86" fill="#fff"/>
+  <!-- Keyhole stem (pill shape, overlaps head for seamless join) -->
+  <rect x="212" y="218" width="88" height="196" rx="44" fill="#fff"/>
+  <!-- Head cutout (the hole) -->
+  <circle cx="256" cy="190" r="44" fill="#3b82f6"/>
+</svg>
