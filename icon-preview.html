@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Icon Concepts — Passphere</title>
+  <title>Icon Polish — Passphere</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -12,346 +12,456 @@
       padding: 3rem 1.5rem;
       color: #111827;
     }
-    h1 {
-      text-align: center;
-      font-size: 1.4rem;
+    h1 { text-align: center; font-size: 1.4rem; font-weight: 700; margin-bottom: .4rem; }
+    .subtitle { text-align: center; font-size: .9rem; color: #6b7280; margin-bottom: 3rem; }
+
+    .section-title {
+      font-size: 1.1rem;
       font-weight: 700;
-      margin-bottom: .5rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: .5rem;
+      border-bottom: 2px solid #e5e7eb;
     }
-    .subtitle {
-      text-align: center;
-      font-size: .9rem;
-      color: #6b7280;
-      margin-bottom: 3rem;
-    }
-    .concepts {
+    .section { max-width: 960px; margin: 0 auto 3rem; }
+
+    .variants {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-      max-width: 900px;
-      margin-inline: auto;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
     }
-    .concept {
+    .variant {
       background: #fff;
       border-radius: 16px;
-      padding: 2rem;
+      padding: 1.75rem;
       border: 1px solid #e5e7eb;
     }
-    .concept-title {
-      font-size: 1rem;
+    .variant-name {
+      font-size: .8rem;
       font-weight: 700;
-      margin-bottom: .3rem;
-    }
-    .concept-desc {
-      font-size: .82rem;
+      text-transform: uppercase;
+      letter-spacing: .06em;
       color: #6b7280;
-      margin-bottom: 1.75rem;
-      line-height: 1.5;
+      margin-bottom: 1.25rem;
     }
     .sizes {
       display: flex;
       align-items: flex-end;
-      gap: 1.5rem;
+      gap: 1rem;
       flex-wrap: wrap;
+      margin-bottom: 1.25rem;
     }
-    .size-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: .5rem;
-    }
-    .size-label {
-      font-size: .68rem;
-      color: #9ca3af;
-      font-family: monospace;
-    }
+    .size-item { display: flex; flex-direction: column; align-items: center; gap: .4rem; }
+    .size-label { font-size: .65rem; color: #9ca3af; font-family: monospace; }
     .on-dark {
       background: #111827;
-      border-radius: 12px;
-      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      padding: .75rem 1rem;
       display: flex;
       gap: 1rem;
-      align-items: flex-end;
-      margin-top: 1.25rem;
+      align-items: center;
     }
+    .on-dark-label { font-size: .72rem; color: #6b7280; }
   </style>
 </head>
 <body>
 
-  <h1>Passphere — Icon Concepts</h1>
-  <p class="subtitle">Four directions. Open icon-preview.html to compare.</p>
+  <h1>Passphere — Icon Polish</h1>
+  <p class="subtitle">B and D refined. Three variations each.</p>
 
-  <div class="concepts">
+  <!-- ================================
+       OPTION B — Keyhole in Circle
+       ================================ -->
+  <div class="section">
+    <div class="section-title">B — Keyhole in Circle</div>
+    <div class="variants">
 
-    <!-- ================================
-         CONCEPT A: Pure Sphere
-         ================================ -->
-    <div class="concept">
-      <div class="concept-title">A — Pure Sphere</div>
-      <div class="concept-desc">A perfect sphere with radial gradient shading. The name IS the icon.</div>
-      <div class="sizes">
-        <div class="size-item">
-          <!-- 512 -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="120" height="120">
-            <defs>
-              <radialGradient id="sphereA" cx="38%" cy="32%" r="65%">
-                <stop offset="0%"   stop-color="#93c5fd"/>
-                <stop offset="45%"  stop-color="#3b82f6"/>
-                <stop offset="100%" stop-color="#1e3a8a"/>
-              </radialGradient>
-              <radialGradient id="shineA" cx="35%" cy="28%" r="35%">
-                <stop offset="0%"   stop-color="rgba(255,255,255,0.55)"/>
-                <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
-              </radialGradient>
-            </defs>
-            <rect width="512" height="512" fill="#1e3a8a" rx="96"/>
-            <circle cx="256" cy="256" r="190" fill="url(#sphereA)"/>
-            <circle cx="256" cy="256" r="190" fill="url(#shineA)"/>
-            <!-- Subtle equator line -->
-            <ellipse cx="256" cy="256" rx="190" ry="52" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="3"/>
-          </svg>
-          <span class="size-label">120px</span>
+      <!-- B1: Classic, solid ring -->
+      <div class="variant">
+        <div class="variant-name">B1 — Solid ring</div>
+        <div class="sizes">
+          <div class="size-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="120" height="120">
+              <defs>
+                <clipPath id="b1clip">
+                  <rect width="512" height="512" rx="96"/>
+                </clipPath>
+              </defs>
+              <rect width="512" height="512" fill="#3b82f6" rx="96"/>
+              <!-- Outer ring -->
+              <circle cx="256" cy="256" r="185" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="14"/>
+              <!-- Keyhole: merged white shape -->
+              <circle cx="256" cy="208" r="82" fill="#fff"/>
+              <path d="M 188 252 C 180 330 210 375 256 375 C 302 375 332 330 324 252 Z" fill="#fff"/>
+              <!-- Keyhole inner cutout -->
+              <circle cx="256" cy="208" r="44" fill="#3b82f6"/>
+            </svg>
+            <span class="size-label">120px</span>
+          </div>
+          <div class="size-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48">
+              <rect width="512" height="512" fill="#3b82f6" rx="96"/>
+              <circle cx="256" cy="256" r="185" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="14"/>
+              <circle cx="256" cy="208" r="82" fill="#fff"/>
+              <path d="M 188 252 C 180 330 210 375 256 375 C 302 375 332 330 324 252 Z" fill="#fff"/>
+              <circle cx="256" cy="208" r="44" fill="#3b82f6"/>
+            </svg>
+            <span class="size-label">48px</span>
+          </div>
+          <div class="size-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32">
+              <rect width="512" height="512" fill="#3b82f6" rx="96"/>
+              <circle cx="256" cy="208" r="82" fill="#fff"/>
+              <path d="M 188 252 C 180 330 210 375 256 375 C 302 375 332 330 324 252 Z" fill="#fff"/>
+              <circle cx="256" cy="208" r="44" fill="#3b82f6"/>
+            </svg>
+            <span class="size-label">32px</span>
+          </div>
+          <div class="size-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16">
+              <rect width="512" height="512" fill="#3b82f6" rx="96"/>
+              <circle cx="256" cy="208" r="82" fill="#fff"/>
+              <path d="M 188 252 C 180 330 210 375 256 375 C 302 375 332 330 324 252 Z" fill="#fff"/>
+              <circle cx="256" cy="208" r="44" fill="#3b82f6"/>
+            </svg>
+            <span class="size-label">16px</span>
+          </div>
         </div>
-        <div class="size-item">
+        <div class="on-dark">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48">
+            <rect width="512" height="512" fill="#3b82f6" rx="96"/>
+            <circle cx="256" cy="256" r="185" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="14"/>
+            <circle cx="256" cy="208" r="82" fill="#fff"/>
+            <path d="M 188 252 C 180 330 210 375 256 375 C 302 375 332 330 324 252 Z" fill="#fff"/>
+            <circle cx="256" cy="208" r="44" fill="#3b82f6"/>
+          </svg>
+          <span class="on-dark-label">On dark</span>
+        </div>
+      </div>
+
+      <!-- B2: Gradient background, thicker ring -->
+      <div class="variant">
+        <div class="variant-name">B2 — Gradient + thick ring</div>
+        <div class="sizes">
+          <div class="size-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="120" height="120">
+              <defs>
+                <linearGradient id="b2bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#60a5fa"/>
+                  <stop offset="100%" stop-color="#2563eb"/>
+                </linearGradient>
+              </defs>
+              <rect width="512" height="512" fill="url(#b2bg)" rx="96"/>
+              <!-- Thick outer ring -->
+              <circle cx="256" cy="256" r="185" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="22"/>
+              <!-- Keyhole -->
+              <circle cx="256" cy="208" r="82" fill="#fff"/>
+              <path d="M 188 252 C 180 330 210 375 256 375 C 302 375 332 330 324 252 Z" fill="#fff"/>
+              <circle cx="256" cy="208" r="44" fill="url(#b2bg)"/>
+            </svg>
+            <span class="size-label">120px</span>
+          </div>
+          <div class="size-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48">
+              <defs>
+                <linearGradient id="b2bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#60a5fa"/>
+                  <stop offset="100%" stop-color="#2563eb"/>
+                </linearGradient>
+              </defs>
+              <rect width="512" height="512" fill="url(#b2bg2)" rx="96"/>
+              <circle cx="256" cy="256" r="185" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="22"/>
+              <circle cx="256" cy="208" r="82" fill="#fff"/>
+              <path d="M 188 252 C 180 330 210 375 256 375 C 302 375 332 330 324 252 Z" fill="#fff"/>
+              <circle cx="256" cy="208" r="44" fill="#2563eb"/>
+            </svg>
+            <span class="size-label">48px</span>
+          </div>
+          <div class="size-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32">
+              <defs>
+                <linearGradient id="b2bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#60a5fa"/>
+                  <stop offset="100%" stop-color="#2563eb"/>
+                </linearGradient>
+              </defs>
+              <rect width="512" height="512" fill="url(#b2bg3)" rx="96"/>
+              <circle cx="256" cy="208" r="82" fill="#fff"/>
+              <path d="M 188 252 C 180 330 210 375 256 375 C 302 375 332 330 324 252 Z" fill="#fff"/>
+              <circle cx="256" cy="208" r="44" fill="#2563eb"/>
+            </svg>
+            <span class="size-label">32px</span>
+          </div>
+          <div class="size-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16">
+              <rect width="512" height="512" fill="#2563eb" rx="96"/>
+              <circle cx="256" cy="208" r="82" fill="#fff"/>
+              <path d="M 188 252 C 180 330 210 375 256 375 C 302 375 332 330 324 252 Z" fill="#fff"/>
+              <circle cx="256" cy="208" r="44" fill="#2563eb"/>
+            </svg>
+            <span class="size-label">16px</span>
+          </div>
+        </div>
+        <div class="on-dark">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48">
             <defs>
-              <radialGradient id="sphereA2" cx="38%" cy="32%" r="65%">
-                <stop offset="0%"   stop-color="#93c5fd"/>
-                <stop offset="45%"  stop-color="#3b82f6"/>
-                <stop offset="100%" stop-color="#1e3a8a"/>
-              </radialGradient>
+              <linearGradient id="b2bgd" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#60a5fa"/>
+                <stop offset="100%" stop-color="#2563eb"/>
+              </linearGradient>
             </defs>
-            <rect width="512" height="512" fill="#1e3a8a" rx="96"/>
-            <circle cx="256" cy="256" r="190" fill="url(#sphereA2)"/>
+            <rect width="512" height="512" fill="url(#b2bgd)" rx="96"/>
+            <circle cx="256" cy="256" r="185" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="22"/>
+            <circle cx="256" cy="208" r="82" fill="#fff"/>
+            <path d="M 188 252 C 180 330 210 375 256 375 C 302 375 332 330 324 252 Z" fill="#fff"/>
+            <circle cx="256" cy="208" r="44" fill="#2563eb"/>
           </svg>
-          <span class="size-label">48px</span>
+          <span class="on-dark-label">On dark</span>
         </div>
-        <div class="size-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32">
+      </div>
+
+      <!-- B3: Dark navy, no ring, centered -->
+      <div class="variant">
+        <div class="variant-name">B3 — Dark navy, no ring</div>
+        <div class="sizes">
+          <div class="size-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="120" height="120">
+              <rect width="512" height="512" fill="#1e40af" rx="96"/>
+              <!-- Keyhole centered -->
+              <circle cx="256" cy="208" r="88" fill="#fff"/>
+              <path d="M 182 252 C 174 338 208 382 256 382 C 304 382 338 338 330 252 Z" fill="#fff"/>
+              <circle cx="256" cy="208" r="46" fill="#1e40af"/>
+            </svg>
+            <span class="size-label">120px</span>
+          </div>
+          <div class="size-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48">
+              <rect width="512" height="512" fill="#1e40af" rx="96"/>
+              <circle cx="256" cy="208" r="88" fill="#fff"/>
+              <path d="M 182 252 C 174 338 208 382 256 382 C 304 382 338 338 330 252 Z" fill="#fff"/>
+              <circle cx="256" cy="208" r="46" fill="#1e40af"/>
+            </svg>
+            <span class="size-label">48px</span>
+          </div>
+          <div class="size-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32">
+              <rect width="512" height="512" fill="#1e40af" rx="96"/>
+              <circle cx="256" cy="208" r="88" fill="#fff"/>
+              <path d="M 182 252 C 174 338 208 382 256 382 C 304 382 338 338 330 252 Z" fill="#fff"/>
+              <circle cx="256" cy="208" r="46" fill="#1e40af"/>
+            </svg>
+            <span class="size-label">32px</span>
+          </div>
+          <div class="size-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16">
+              <rect width="512" height="512" fill="#1e40af" rx="96"/>
+              <circle cx="256" cy="208" r="88" fill="#fff"/>
+              <path d="M 182 252 C 174 338 208 382 256 382 C 304 382 338 338 330 252 Z" fill="#fff"/>
+              <circle cx="256" cy="208" r="46" fill="#1e40af"/>
+            </svg>
+            <span class="size-label">16px</span>
+          </div>
+        </div>
+        <div class="on-dark">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48">
+            <rect width="512" height="512" fill="#1e40af" rx="96"/>
+            <circle cx="256" cy="208" r="88" fill="#fff"/>
+            <path d="M 182 252 C 174 338 208 382 256 382 C 304 382 338 338 330 252 Z" fill="#fff"/>
+            <circle cx="256" cy="208" r="46" fill="#1e40af"/>
+          </svg>
+          <span class="on-dark-label">On dark</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================================
+       OPTION D — Shield + Orbit
+       ================================ -->
+  <div class="section">
+    <div class="section-title">D — Shield + Orbit</div>
+    <div class="variants">
+
+      <!-- D1: Thin arc, small refined dot -->
+      <div class="variant">
+        <div class="variant-name">D1 — Thin arc, small dot</div>
+        <div class="sizes">
+          <div class="size-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="120" height="120">
+              <rect width="512" height="512" fill="#3b82f6" rx="96"/>
+              <path d="M 256 88 L 390 144 L 390 278 C 390 352 256 424 256 424 C 256 424 122 352 122 278 L 122 144 Z" fill="#fff"/>
+              <!-- Thin orbit arc over shield top -->
+              <path d="M 108 188 A 178 178 0 0 1 404 188"
+                    fill="none" stroke="#3b82f6" stroke-width="11" stroke-linecap="round"/>
+              <!-- Small refined dot -->
+              <circle cx="404" cy="188" r="16" fill="#3b82f6"/>
+              <circle cx="404" cy="188" r="8" fill="#fff"/>
+            </svg>
+            <span class="size-label">120px</span>
+          </div>
+          <div class="size-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48">
+              <rect width="512" height="512" fill="#3b82f6" rx="96"/>
+              <path d="M 256 88 L 390 144 L 390 278 C 390 352 256 424 256 424 C 256 424 122 352 122 278 L 122 144 Z" fill="#fff"/>
+              <path d="M 108 188 A 178 178 0 0 1 404 188" fill="none" stroke="#3b82f6" stroke-width="11" stroke-linecap="round"/>
+              <circle cx="404" cy="188" r="16" fill="#3b82f6"/>
+              <circle cx="404" cy="188" r="8" fill="#fff"/>
+            </svg>
+            <span class="size-label">48px</span>
+          </div>
+          <div class="size-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32">
+              <rect width="512" height="512" fill="#3b82f6" rx="96"/>
+              <path d="M 256 88 L 390 144 L 390 278 C 390 352 256 424 256 424 C 256 424 122 352 122 278 L 122 144 Z" fill="#fff"/>
+              <path d="M 108 188 A 178 178 0 0 1 404 188" fill="none" stroke="#3b82f6" stroke-width="11" stroke-linecap="round"/>
+              <circle cx="404" cy="188" r="16" fill="#3b82f6"/>
+              <circle cx="404" cy="188" r="8" fill="#fff"/>
+            </svg>
+            <span class="size-label">32px</span>
+          </div>
+          <div class="size-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16">
+              <rect width="512" height="512" fill="#3b82f6" rx="96"/>
+              <path d="M 256 88 L 390 144 L 390 278 C 390 352 256 424 256 424 C 256 424 122 352 122 278 L 122 144 Z" fill="#fff"/>
+            </svg>
+            <span class="size-label">16px</span>
+          </div>
+        </div>
+        <div class="on-dark">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48">
+            <rect width="512" height="512" fill="#3b82f6" rx="96"/>
+            <path d="M 256 88 L 390 144 L 390 278 C 390 352 256 424 256 424 C 256 424 122 352 122 278 L 122 144 Z" fill="#fff"/>
+            <path d="M 108 188 A 178 178 0 0 1 404 188" fill="none" stroke="#3b82f6" stroke-width="11" stroke-linecap="round"/>
+            <circle cx="404" cy="188" r="16" fill="#3b82f6"/>
+            <circle cx="404" cy="188" r="8" fill="#fff"/>
+          </svg>
+          <span class="on-dark-label">On dark</span>
+        </div>
+      </div>
+
+      <!-- D2: Full elliptical orbit ring (planet style) -->
+      <div class="variant">
+        <div class="variant-name">D2 — Planet ring orbit</div>
+        <div class="sizes">
+          <div class="size-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="120" height="120">
+              <rect width="512" height="512" fill="#3b82f6" rx="96"/>
+              <!-- Orbit ring behind shield -->
+              <ellipse cx="256" cy="260" rx="205" ry="68" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="10"/>
+              <!-- Shield -->
+              <path d="M 256 88 L 390 144 L 390 278 C 390 352 256 424 256 424 C 256 424 122 352 122 278 L 122 144 Z" fill="#fff"/>
+              <!-- Orbit ring in front of shield (top half only, clipped) -->
+              <path d="M 51 260 A 205 68 0 0 1 461 260" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="10"/>
+              <!-- Orbiting dot -->
+              <circle cx="461" cy="260" r="18" fill="#fff"/>
+            </svg>
+            <span class="size-label">120px</span>
+          </div>
+          <div class="size-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48">
+              <rect width="512" height="512" fill="#3b82f6" rx="96"/>
+              <ellipse cx="256" cy="260" rx="205" ry="68" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="10"/>
+              <path d="M 256 88 L 390 144 L 390 278 C 390 352 256 424 256 424 C 256 424 122 352 122 278 L 122 144 Z" fill="#fff"/>
+              <path d="M 51 260 A 205 68 0 0 1 461 260" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="10"/>
+              <circle cx="461" cy="260" r="18" fill="#fff"/>
+            </svg>
+            <span class="size-label">48px</span>
+          </div>
+          <div class="size-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32">
+              <rect width="512" height="512" fill="#3b82f6" rx="96"/>
+              <path d="M 256 88 L 390 144 L 390 278 C 390 352 256 424 256 424 C 256 424 122 352 122 278 L 122 144 Z" fill="#fff"/>
+              <ellipse cx="256" cy="260" rx="205" ry="68" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="10"/>
+            </svg>
+            <span class="size-label">32px</span>
+          </div>
+          <div class="size-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16">
+              <rect width="512" height="512" fill="#3b82f6" rx="96"/>
+              <path d="M 256 88 L 390 144 L 390 278 C 390 352 256 424 256 424 C 256 424 122 352 122 278 L 122 144 Z" fill="#fff"/>
+            </svg>
+            <span class="size-label">16px</span>
+          </div>
+        </div>
+        <div class="on-dark">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48">
+            <rect width="512" height="512" fill="#3b82f6" rx="96"/>
+            <ellipse cx="256" cy="260" rx="205" ry="68" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="10"/>
+            <path d="M 256 88 L 390 144 L 390 278 C 390 352 256 424 256 424 C 256 424 122 352 122 278 L 122 144 Z" fill="#fff"/>
+            <path d="M 51 260 A 205 68 0 0 1 461 260" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="10"/>
+            <circle cx="461" cy="260" r="18" fill="#fff"/>
+          </svg>
+          <span class="on-dark-label">On dark</span>
+        </div>
+      </div>
+
+      <!-- D3: No dot, just clean arc -->
+      <div class="variant">
+        <div class="variant-name">D3 — Arc only, no dot</div>
+        <div class="sizes">
+          <div class="size-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="120" height="120">
+              <defs>
+                <linearGradient id="d3bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#60a5fa"/>
+                  <stop offset="100%" stop-color="#2563eb"/>
+                </linearGradient>
+              </defs>
+              <rect width="512" height="512" fill="url(#d3bg)" rx="96"/>
+              <path d="M 256 88 L 390 144 L 390 278 C 390 352 256 424 256 424 C 256 424 122 352 122 278 L 122 144 Z" fill="#fff"/>
+              <!-- Clean arc, no dot -->
+              <path d="M 96 176 A 192 192 0 0 1 416 176"
+                    fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="12" stroke-linecap="round"/>
+            </svg>
+            <span class="size-label">120px</span>
+          </div>
+          <div class="size-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48">
+              <defs>
+                <linearGradient id="d3bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#60a5fa"/>
+                  <stop offset="100%" stop-color="#2563eb"/>
+                </linearGradient>
+              </defs>
+              <rect width="512" height="512" fill="url(#d3bg2)" rx="96"/>
+              <path d="M 256 88 L 390 144 L 390 278 C 390 352 256 424 256 424 C 256 424 122 352 122 278 L 122 144 Z" fill="#fff"/>
+              <path d="M 96 176 A 192 192 0 0 1 416 176" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="12" stroke-linecap="round"/>
+            </svg>
+            <span class="size-label">48px</span>
+          </div>
+          <div class="size-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32">
+              <rect width="512" height="512" fill="#2563eb" rx="96"/>
+              <path d="M 256 88 L 390 144 L 390 278 C 390 352 256 424 256 424 C 256 424 122 352 122 278 L 122 144 Z" fill="#fff"/>
+              <path d="M 96 176 A 192 192 0 0 1 416 176" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="12" stroke-linecap="round"/>
+            </svg>
+            <span class="size-label">32px</span>
+          </div>
+          <div class="size-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16">
+              <rect width="512" height="512" fill="#2563eb" rx="96"/>
+              <path d="M 256 88 L 390 144 L 390 278 C 390 352 256 424 256 424 C 256 424 122 352 122 278 L 122 144 Z" fill="#fff"/>
+            </svg>
+            <span class="size-label">16px</span>
+          </div>
+        </div>
+        <div class="on-dark">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48">
             <defs>
-              <radialGradient id="sphereA3" cx="38%" cy="32%" r="65%">
-                <stop offset="0%"   stop-color="#93c5fd"/>
-                <stop offset="45%"  stop-color="#3b82f6"/>
-                <stop offset="100%" stop-color="#1e3a8a"/>
-              </radialGradient>
+              <linearGradient id="d3bgd" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#60a5fa"/>
+                <stop offset="100%" stop-color="#2563eb"/>
+              </linearGradient>
             </defs>
-            <rect width="512" height="512" fill="#1e3a8a" rx="96"/>
-            <circle cx="256" cy="256" r="190" fill="url(#sphereA3)"/>
+            <rect width="512" height="512" fill="url(#d3bgd)" rx="96"/>
+            <path d="M 256 88 L 390 144 L 390 278 C 390 352 256 424 256 424 C 256 424 122 352 122 278 L 122 144 Z" fill="#fff"/>
+            <path d="M 96 176 A 192 192 0 0 1 416 176" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="12" stroke-linecap="round"/>
           </svg>
-          <span class="size-label">32px</span>
-        </div>
-        <div class="size-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16">
-            <rect width="512" height="512" fill="#1e3a8a" rx="96"/>
-            <circle cx="256" cy="256" r="190" fill="#3b82f6"/>
-          </svg>
-          <span class="size-label">16px</span>
+          <span class="on-dark-label">On dark</span>
         </div>
       </div>
-      <div class="on-dark">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="56" height="56">
-          <defs>
-            <radialGradient id="sphereAd" cx="38%" cy="32%" r="65%">
-              <stop offset="0%"   stop-color="#93c5fd"/>
-              <stop offset="45%"  stop-color="#3b82f6"/>
-              <stop offset="100%" stop-color="#1e3a8a"/>
-            </radialGradient>
-          </defs>
-          <rect width="512" height="512" fill="#1e3a8a" rx="96"/>
-          <circle cx="256" cy="256" r="190" fill="url(#sphereAd)"/>
-          <ellipse cx="256" cy="256" rx="190" ry="52" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="3"/>
-        </svg>
-        <span style="font-size:.75rem;color:#6b7280;">On dark</span>
-      </div>
-    </div>
 
-    <!-- ================================
-         CONCEPT B: Keyhole in Circle
-         ================================ -->
-    <div class="concept">
-      <div class="concept-title">B — Keyhole in Circle</div>
-      <div class="concept-desc">A circle (the sphere) with a keyhole. Two shapes, nothing more.</div>
-      <div class="sizes">
-        <div class="size-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="120" height="120">
-            <rect width="512" height="512" fill="#3b82f6" rx="96"/>
-            <!-- Outer circle ring -->
-            <circle cx="256" cy="256" r="180" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="12"/>
-            <!-- Keyhole: circle top -->
-            <circle cx="256" cy="220" r="68" fill="#fff"/>
-            <!-- Keyhole: triangle bottom -->
-            <polygon points="256,264 204,356 308,356" fill="#fff"/>
-            <!-- Cutout: inner circle of keyhole -->
-            <circle cx="256" cy="220" r="36" fill="#3b82f6"/>
-          </svg>
-          <span class="size-label">120px</span>
-        </div>
-        <div class="size-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48">
-            <rect width="512" height="512" fill="#3b82f6" rx="96"/>
-            <circle cx="256" cy="220" r="68" fill="#fff"/>
-            <polygon points="256,264 204,356 308,356" fill="#fff"/>
-            <circle cx="256" cy="220" r="36" fill="#3b82f6"/>
-          </svg>
-          <span class="size-label">48px</span>
-        </div>
-        <div class="size-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32">
-            <rect width="512" height="512" fill="#3b82f6" rx="96"/>
-            <circle cx="256" cy="220" r="68" fill="#fff"/>
-            <polygon points="256,264 204,356 308,356" fill="#fff"/>
-            <circle cx="256" cy="220" r="36" fill="#3b82f6"/>
-          </svg>
-          <span class="size-label">32px</span>
-        </div>
-        <div class="size-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16">
-            <rect width="512" height="512" fill="#3b82f6" rx="96"/>
-            <circle cx="256" cy="220" r="68" fill="#fff"/>
-            <polygon points="256,264 204,356 308,356" fill="#fff"/>
-            <circle cx="256" cy="220" r="36" fill="#3b82f6"/>
-          </svg>
-          <span class="size-label">16px</span>
-        </div>
-      </div>
-      <div class="on-dark">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="56" height="56">
-          <rect width="512" height="512" fill="#3b82f6" rx="96"/>
-          <circle cx="256" cy="256" r="180" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="12"/>
-          <circle cx="256" cy="220" r="68" fill="#fff"/>
-          <polygon points="256,264 204,356 308,356" fill="#fff"/>
-          <circle cx="256" cy="220" r="36" fill="#3b82f6"/>
-        </svg>
-        <span style="font-size:.75rem;color:#6b7280;">On dark</span>
-      </div>
     </div>
-
-    <!-- ================================
-         CONCEPT C: P Lettermark
-         ================================ -->
-    <div class="concept">
-      <div class="concept-title">C — P Lettermark</div>
-      <div class="concept-desc">A bold geometric "P" built from circle arcs. Brand-forward and ownable.</div>
-      <div class="sizes">
-        <div class="size-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="120" height="120">
-            <rect width="512" height="512" fill="#3b82f6" rx="96"/>
-            <!-- P stem -->
-            <rect x="148" y="128" width="60" height="256" rx="12" fill="#fff"/>
-            <!-- P bowl: outer semicircle -->
-            <path d="M 208 128 A 100 100 0 0 1 208 328" fill="#fff"/>
-            <!-- P bowl: inner cutout -->
-            <path d="M 208 168 A 60 60 0 0 1 208 288" fill="#3b82f6"/>
-            <!-- Clean left edge of cutout -->
-            <rect x="208" y="168" width="20" height="120" fill="#3b82f6"/>
-          </svg>
-          <span class="size-label">120px</span>
-        </div>
-        <div class="size-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48">
-            <rect width="512" height="512" fill="#3b82f6" rx="96"/>
-            <rect x="148" y="128" width="60" height="256" rx="12" fill="#fff"/>
-            <path d="M 208 128 A 100 100 0 0 1 208 328" fill="#fff"/>
-            <path d="M 208 168 A 60 60 0 0 1 208 288" fill="#3b82f6"/>
-            <rect x="208" y="168" width="20" height="120" fill="#3b82f6"/>
-          </svg>
-          <span class="size-label">48px</span>
-        </div>
-        <div class="size-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32">
-            <rect width="512" height="512" fill="#3b82f6" rx="96"/>
-            <rect x="148" y="128" width="60" height="256" rx="12" fill="#fff"/>
-            <path d="M 208 128 A 100 100 0 0 1 208 328" fill="#fff"/>
-            <path d="M 208 168 A 60 60 0 0 1 208 288" fill="#3b82f6"/>
-            <rect x="208" y="168" width="20" height="120" fill="#3b82f6"/>
-          </svg>
-          <span class="size-label">32px</span>
-        </div>
-        <div class="size-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16">
-            <rect width="512" height="512" fill="#3b82f6" rx="96"/>
-            <rect x="148" y="128" width="60" height="256" rx="12" fill="#fff"/>
-            <path d="M 208 128 A 100 100 0 0 1 208 328" fill="#fff"/>
-            <path d="M 208 168 A 60 60 0 0 1 208 288" fill="#3b82f6"/>
-            <rect x="208" y="168" width="20" height="120" fill="#3b82f6"/>
-          </svg>
-          <span class="size-label">16px</span>
-        </div>
-      </div>
-      <div class="on-dark">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="56" height="56">
-          <rect width="512" height="512" fill="#3b82f6" rx="96"/>
-          <rect x="148" y="128" width="60" height="256" rx="12" fill="#fff"/>
-          <path d="M 208 128 A 100 100 0 0 1 208 328" fill="#fff"/>
-          <path d="M 208 168 A 60 60 0 0 1 208 288" fill="#3b82f6"/>
-          <rect x="208" y="168" width="20" height="120" fill="#3b82f6"/>
-        </svg>
-        <span style="font-size:.75rem;color:#6b7280;">On dark</span>
-      </div>
-    </div>
-
-    <!-- ================================
-         CONCEPT D: Surprise — Shield + Orbit
-         ================================ -->
-    <div class="concept">
-      <div class="concept-title">D — Shield + Orbit</div>
-      <div class="concept-desc">A minimal shield with a single orbit arc. Security meets the sphere concept.</div>
-      <div class="sizes">
-        <div class="size-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="120" height="120">
-            <rect width="512" height="512" fill="#3b82f6" rx="96"/>
-            <!-- Shield shape -->
-            <path d="M 256 96 L 380 148 L 380 272 C 380 340 256 416 256 416 C 256 416 132 340 132 272 L 132 148 Z"
-                  fill="#fff"/>
-            <!-- Orbit arc over shield -->
-            <path d="M 140 200 A 160 160 0 0 1 372 200"
-                  fill="none" stroke="#3b82f6" stroke-width="20" stroke-linecap="round"/>
-            <!-- Small dot on orbit -->
-            <circle cx="372" cy="200" r="18" fill="#3b82f6"/>
-            <circle cx="372" cy="200" r="10" fill="#fff"/>
-          </svg>
-          <span class="size-label">120px</span>
-        </div>
-        <div class="size-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48">
-            <rect width="512" height="512" fill="#3b82f6" rx="96"/>
-            <path d="M 256 96 L 380 148 L 380 272 C 380 340 256 416 256 416 C 256 416 132 340 132 272 L 132 148 Z" fill="#fff"/>
-            <path d="M 140 200 A 160 160 0 0 1 372 200" fill="none" stroke="#3b82f6" stroke-width="20" stroke-linecap="round"/>
-            <circle cx="372" cy="200" r="18" fill="#3b82f6"/>
-            <circle cx="372" cy="200" r="10" fill="#fff"/>
-          </svg>
-          <span class="size-label">48px</span>
-        </div>
-        <div class="size-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32">
-            <rect width="512" height="512" fill="#3b82f6" rx="96"/>
-            <path d="M 256 96 L 380 148 L 380 272 C 380 340 256 416 256 416 C 256 416 132 340 132 272 L 132 148 Z" fill="#fff"/>
-            <path d="M 140 200 A 160 160 0 0 1 372 200" fill="none" stroke="#3b82f6" stroke-width="20" stroke-linecap="round"/>
-            <circle cx="372" cy="200" r="18" fill="#3b82f6"/>
-            <circle cx="372" cy="200" r="10" fill="#fff"/>
-          </svg>
-          <span class="size-label">32px</span>
-        </div>
-        <div class="size-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16">
-            <rect width="512" height="512" fill="#3b82f6" rx="96"/>
-            <path d="M 256 96 L 380 148 L 380 272 C 380 340 256 416 256 416 C 256 416 132 340 132 272 L 132 148 Z" fill="#fff"/>
-          </svg>
-          <span class="size-label">16px</span>
-        </div>
-      </div>
-      <div class="on-dark">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="56" height="56">
-          <rect width="512" height="512" fill="#3b82f6" rx="96"/>
-          <path d="M 256 96 L 380 148 L 380 272 C 380 340 256 416 256 416 C 256 416 132 340 132 272 L 132 148 Z" fill="#fff"/>
-          <path d="M 140 200 A 160 160 0 0 1 372 200" fill="none" stroke="#3b82f6" stroke-width="20" stroke-linecap="round"/>
-          <circle cx="372" cy="200" r="18" fill="#3b82f6"/>
-          <circle cx="372" cy="200" r="10" fill="#fff"/>
-        </svg>
-        <span style="font-size:.75rem;color:#6b7280;">On dark</span>
-      </div>
-    </div>
-
   </div>
 
 </body>
