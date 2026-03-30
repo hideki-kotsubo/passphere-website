@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Icon Preview — Passphere</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f3f4f6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 1rem;
+      gap: 3rem;
+    }
+    h1 { font-size: 1rem; color: #6b7280; margin: 0; }
+    .row {
+      display: flex;
+      align-items: flex-end;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .size-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .75rem;
+    }
+    .size-label {
+      font-size: .75rem;
+      color: #9ca3af;
+      font-family: monospace;
+    }
+    .dark-bg {
+      background: #111827;
+      padding: 1.5rem;
+      border-radius: 12px;
+    }
+    .light-bg {
+      background: #ffffff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Passphere — Icon Preview</h1>
+
+  <!-- The SVG icon inline so it renders immediately -->
+  <svg id="the-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="display:none">
+    <rect width="512" height="512" fill="#3b82f6" rx="80"/>
+    <ellipse cx="256" cy="270" rx="210" ry="90"
+      fill="none"
+      stroke="rgba(255,255,255,0.18)"
+      stroke-width="8"
+      stroke-dasharray="24 14"
+      stroke-linecap="round"/>
+    <circle cx="46"  cy="270" r="14" fill="rgba(255,255,255,0.35)"/>
+    <circle cx="466" cy="270" r="14" fill="rgba(255,255,255,0.35)"/>
+    <circle cx="256" cy="162" r="10" fill="rgba(255,255,255,0.25)"/>
+    <circle cx="256" cy="378" r="10" fill="rgba(255,255,255,0.25)"/>
+    <rect x="176" y="234" width="160" height="164" rx="16" fill="#ffffff"/>
+    <path d="M 336 234 L 336 164 C 336 120 300 84 256 84 C 212 84 176 120 176 164 L 176 234"
+          stroke="#ffffff" stroke-width="32" fill="none" stroke-linecap="round"/>
+    <circle cx="256" cy="296" r="20" fill="#3b82f6"/>
+    <rect x="246" y="296" width="20" height="46" rx="4" fill="#3b82f6"/>
+  </svg>
+
+  <!-- Sizes on light background -->
+  <div>
+    <h1 style="text-align:center; margin-bottom:1.5rem;">On light background</h1>
+    <div class="light-bg">
+      <div class="row">
+        <div class="size-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+            <rect width="512" height="512" fill="#3b82f6" rx="80"/>
+            <ellipse cx="256" cy="270" rx="210" ry="90" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="8" stroke-dasharray="24 14" stroke-linecap="round"/>
+            <circle cx="46"  cy="270" r="14" fill="rgba(255,255,255,0.35)"/>
+            <circle cx="466" cy="270" r="14" fill="rgba(255,255,255,0.35)"/>
+            <circle cx="256" cy="162" r="10" fill="rgba(255,255,255,0.25)"/>
+            <circle cx="256" cy="378" r="10" fill="rgba(255,255,255,0.25)"/>
+            <rect x="176" y="234" width="160" height="164" rx="16" fill="#ffffff"/>
+            <path d="M 336 234 L 336 164 C 336 120 300 84 256 84 C 212 84 176 120 176 164 L 176 234" stroke="#ffffff" stroke-width="32" fill="none" stroke-linecap="round"/>
+            <circle cx="256" cy="296" r="20" fill="#3b82f6"/>
+            <rect x="246" y="296" width="20" height="46" rx="4" fill="#3b82f6"/>
+          </svg>
+          <span class="size-label">512×512 (App Store / Play Store)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Common sizes -->
+  <div>
+    <h1 style="text-align:center; margin-bottom:1.5rem;">Common sizes</h1>
+    <div class="light-bg">
+      <div class="row">
+        <div class="size-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="192" height="192">
+            <rect width="512" height="512" fill="#3b82f6" rx="80"/>
+            <ellipse cx="256" cy="270" rx="210" ry="90" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="8" stroke-dasharray="24 14" stroke-linecap="round"/>
+            <circle cx="46"  cy="270" r="14" fill="rgba(255,255,255,0.35)"/>
+            <circle cx="466" cy="270" r="14" fill="rgba(255,255,255,0.35)"/>
+            <circle cx="256" cy="162" r="10" fill="rgba(255,255,255,0.25)"/>
+            <circle cx="256" cy="378" r="10" fill="rgba(255,255,255,0.25)"/>
+            <rect x="176" y="234" width="160" height="164" rx="16" fill="#ffffff"/>
+            <path d="M 336 234 L 336 164 C 336 120 300 84 256 84 C 212 84 176 120 176 164 L 176 234" stroke="#ffffff" stroke-width="32" fill="none" stroke-linecap="round"/>
+            <circle cx="256" cy="296" r="20" fill="#3b82f6"/>
+            <rect x="246" y="296" width="20" height="46" rx="4" fill="#3b82f6"/>
+          </svg>
+          <span class="size-label">192×192 (PWA / Android)</span>
+        </div>
+        <div class="size-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="80" height="80">
+            <rect width="512" height="512" fill="#3b82f6" rx="80"/>
+            <ellipse cx="256" cy="270" rx="210" ry="90" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="8" stroke-dasharray="24 14" stroke-linecap="round"/>
+            <circle cx="46"  cy="270" r="14" fill="rgba(255,255,255,0.35)"/>
+            <circle cx="466" cy="270" r="14" fill="rgba(255,255,255,0.35)"/>
+            <circle cx="256" cy="162" r="10" fill="rgba(255,255,255,0.25)"/>
+            <circle cx="256" cy="378" r="10" fill="rgba(255,255,255,0.25)"/>
+            <rect x="176" y="234" width="160" height="164" rx="16" fill="#ffffff"/>
+            <path d="M 336 234 L 336 164 C 336 120 300 84 256 84 C 212 84 176 120 176 164 L 176 234" stroke="#ffffff" stroke-width="32" fill="none" stroke-linecap="round"/>
+            <circle cx="256" cy="296" r="20" fill="#3b82f6"/>
+            <rect x="246" y="296" width="20" height="46" rx="4" fill="#3b82f6"/>
+          </svg>
+          <span class="size-label">80×80</span>
+        </div>
+        <div class="size-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48">
+            <rect width="512" height="512" fill="#3b82f6" rx="80"/>
+            <ellipse cx="256" cy="270" rx="210" ry="90" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="8" stroke-dasharray="24 14" stroke-linecap="round"/>
+            <circle cx="46"  cy="270" r="14" fill="rgba(255,255,255,0.35)"/>
+            <circle cx="466" cy="270" r="14" fill="rgba(255,255,255,0.35)"/>
+            <circle cx="256" cy="162" r="10" fill="rgba(255,255,255,0.25)"/>
+            <circle cx="256" cy="378" r="10" fill="rgba(255,255,255,0.25)"/>
+            <rect x="176" y="234" width="160" height="164" rx="16" fill="#ffffff"/>
+            <path d="M 336 234 L 336 164 C 336 120 300 84 256 84 C 212 84 176 120 176 164 L 176 234" stroke="#ffffff" stroke-width="32" fill="none" stroke-linecap="round"/>
+            <circle cx="256" cy="296" r="20" fill="#3b82f6"/>
+            <rect x="246" y="296" width="20" height="46" rx="4" fill="#3b82f6"/>
+          </svg>
+          <span class="size-label">48×48</span>
+        </div>
+        <div class="size-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32">
+            <rect width="512" height="512" fill="#3b82f6" rx="80"/>
+            <ellipse cx="256" cy="270" rx="210" ry="90" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="8" stroke-dasharray="24 14" stroke-linecap="round"/>
+            <circle cx="46"  cy="270" r="14" fill="rgba(255,255,255,0.35)"/>
+            <circle cx="466" cy="270" r="14" fill="rgba(255,255,255,0.35)"/>
+            <circle cx="256" cy="162" r="10" fill="rgba(255,255,255,0.25)"/>
+            <circle cx="256" cy="378" r="10" fill="rgba(255,255,255,0.25)"/>
+            <rect x="176" y="234" width="160" height="164" rx="16" fill="#ffffff"/>
+            <path d="M 336 234 L 336 164 C 336 120 300 84 256 84 C 212 84 176 120 176 164 L 176 234" stroke="#ffffff" stroke-width="32" fill="none" stroke-linecap="round"/>
+            <circle cx="256" cy="296" r="20" fill="#3b82f6"/>
+            <rect x="246" y="296" width="20" height="46" rx="4" fill="#3b82f6"/>
+          </svg>
+          <span class="size-label">32×32 (favicon)</span>
+        </div>
+        <div class="size-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16">
+            <rect width="512" height="512" fill="#3b82f6" rx="80"/>
+            <ellipse cx="256" cy="270" rx="210" ry="90" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="8" stroke-dasharray="24 14" stroke-linecap="round"/>
+            <circle cx="46"  cy="270" r="14" fill="rgba(255,255,255,0.35)"/>
+            <circle cx="466" cy="270" r="14" fill="rgba(255,255,255,0.35)"/>
+            <circle cx="256" cy="162" r="10" fill="rgba(255,255,255,0.25)"/>
+            <circle cx="256" cy="378" r="10" fill="rgba(255,255,255,0.25)"/>
+            <rect x="176" y="234" width="160" height="164" rx="16" fill="#ffffff"/>
+            <path d="M 336 234 L 336 164 C 336 120 300 84 256 84 C 212 84 176 120 176 164 L 176 234" stroke="#ffffff" stroke-width="32" fill="none" stroke-linecap="round"/>
+            <circle cx="256" cy="296" r="20" fill="#3b82f6"/>
+            <rect x="246" y="296" width="20" height="46" rx="4" fill="#3b82f6"/>
+          </svg>
+          <span class="size-label">16×16 (browser tab)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- On dark background -->
+  <div>
+    <h1 style="text-align:center; margin-bottom:1.5rem;">On dark background</h1>
+    <div class="dark-bg">
+      <div class="row">
+        <div class="size-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="192" height="192">
+            <rect width="512" height="512" fill="#3b82f6" rx="80"/>
+            <ellipse cx="256" cy="270" rx="210" ry="90" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="8" stroke-dasharray="24 14" stroke-linecap="round"/>
+            <circle cx="46"  cy="270" r="14" fill="rgba(255,255,255,0.35)"/>
+            <circle cx="466" cy="270" r="14" fill="rgba(255,255,255,0.35)"/>
+            <circle cx="256" cy="162" r="10" fill="rgba(255,255,255,0.25)"/>
+            <circle cx="256" cy="378" r="10" fill="rgba(255,255,255,0.25)"/>
+            <rect x="176" y="234" width="160" height="164" rx="16" fill="#ffffff"/>
+            <path d="M 336 234 L 336 164 C 336 120 300 84 256 84 C 212 84 176 120 176 164 L 176 234" stroke="#ffffff" stroke-width="32" fill="none" stroke-linecap="round"/>
+            <circle cx="256" cy="296" r="20" fill="#3b82f6"/>
+            <rect x="246" y="296" width="20" height="46" rx="4" fill="#3b82f6"/>
+          </svg>
+          <span class="size-label" style="color:#6b7280;">192×192</span>
+        </div>
+        <div class="size-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48">
+            <rect width="512" height="512" fill="#3b82f6" rx="80"/>
+            <ellipse cx="256" cy="270" rx="210" ry="90" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="8" stroke-dasharray="24 14" stroke-linecap="round"/>
+            <circle cx="46"  cy="270" r="14" fill="rgba(255,255,255,0.35)"/>
+            <circle cx="466" cy="270" r="14" fill="rgba(255,255,255,0.35)"/>
+            <circle cx="256" cy="162" r="10" fill="rgba(255,255,255,0.25)"/>
+            <circle cx="256" cy="378" r="10" fill="rgba(255,255,255,0.25)"/>
+            <rect x="176" y="234" width="160" height="164" rx="16" fill="#ffffff"/>
+            <path d="M 336 234 L 336 164 C 336 120 300 84 256 84 C 212 84 176 120 176 164 L 176 234" stroke="#ffffff" stroke-width="32" fill="none" stroke-linecap="round"/>
+            <circle cx="256" cy="296" r="20" fill="#3b82f6"/>
+            <rect x="246" y="296" width="20" height="46" rx="4" fill="#3b82f6"/>
+          </svg>
+          <span class="size-label" style="color:#6b7280;">48×48</span>
+        </div>
+        <div class="size-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32">
+            <rect width="512" height="512" fill="#3b82f6" rx="80"/>
+            <ellipse cx="256" cy="270" rx="210" ry="90" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="8" stroke-dasharray="24 14" stroke-linecap="round"/>
+            <circle cx="46"  cy="270" r="14" fill="rgba(255,255,255,0.35)"/>
+            <circle cx="466" cy="270" r="14" fill="rgba(255,255,255,0.35)"/>
+            <circle cx="256" cy="162" r="10" fill="rgba(255,255,255,0.25)"/>
+            <circle cx="256" cy="378" r="10" fill="rgba(255,255,255,0.25)"/>
+            <rect x="176" y="234" width="160" height="164" rx="16" fill="#ffffff"/>
+            <path d="M 336 234 L 336 164 C 336 120 300 84 256 84 C 212 84 176 120 176 164 L 176 234" stroke="#ffffff" stroke-width="32" fill="none" stroke-linecap="round"/>
+            <circle cx="256" cy="296" r="20" fill="#3b82f6"/>
+            <rect x="246" y="296" width="20" height="46" rx="4" fill="#3b82f6"/>
+          </svg>
+          <span class="size-label" style="color:#6b7280;">32×32</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
