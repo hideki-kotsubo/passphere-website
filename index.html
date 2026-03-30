@@ -18,6 +18,15 @@
 </head>
 <body>
 
+  <!-- ===== TOP BANNER ===== -->
+  <div class="top-banner">
+    <div class="container top-banner-inner">
+      <span class="top-banner-tag">How to say it</span>
+      <p class="top-banner-text"><strong>Pass</strong> + <strong>Sphere</strong> — like a globe for your passwords. Offline. Encrypted. Entirely yours.</p>
+      <button class="top-banner-close" aria-label="Close banner">&times;</button>
+    </div>
+  </div>
+
   <!-- ===== NAVBAR ===== -->
   <header class="navbar">
     <div class="container navbar-inner">
@@ -26,7 +35,10 @@
           <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
           <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
         </svg>
-        <span class="logo-text">Passphere</span>
+        <div class="logo-group">
+          <span class="logo-text"><span class="logo-pass">Pas</span><span class="logo-sphere">sphere</span></span>
+          <span class="logo-tagline">Your passwords. Your sphere.</span>
+        </div>
       </a>
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#how-it-works">How it works</a>
@@ -44,9 +56,9 @@
     <section class="hero" id="home">
       <div class="container hero-inner">
         <div class="hero-content">
-          <div class="hero-badge">100% offline. No account required.</div>
-          <h1 class="hero-headline">Your passwords.<br>Offline. Encrypted.<br>Yours.</h1>
-          <p class="hero-sub">A zero-knowledge password manager that works completely offline. All data stays on your device — no cloud, no servers, no subscriptions. Free on the web.</p>
+          <div class="hero-badge">Pass + Sphere &mdash; say it like it sounds.</div>
+          <h1 class="hero-headline">One sphere.<br>All your passwords.<br>Zero cloud.</h1>
+          <p class="hero-sub">Passphere keeps your passwords encrypted locally, synced peer-to-peer across all your devices. No account. No cloud. No subscription. Entirely yours.</p>
           <div class="hero-actions">
             <a href="https://password-wallet.app" class="btn btn-primary" target="_blank" rel="noopener">
               Open Web App &mdash; Free
@@ -586,7 +598,7 @@
     <div class="container footer-inner">
       <a href="#" class="logo logo--footer" aria-label="Passphere home">
         <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        <span class="logo-text">Passphere</span>
+        <span class="logo-text"><span class="logo-pass">Pass</span><span class="logo-sphere">phere</span></span>
       </a>
       <p class="footer-copy">&copy; <span id="copyright-year"></span> Passphere by Hideki Kotsubo. All rights reserved.</p>
       <nav class="footer-links" aria-label="Footer navigation">

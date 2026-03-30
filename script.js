@@ -1,3 +1,11 @@
+// Top banner close
+var bannerClose = document.querySelector('.top-banner-close');
+if (bannerClose) {
+  bannerClose.addEventListener('click', function () {
+    document.querySelector('.top-banner').classList.add('is-hidden');
+  });
+}
+
 // Copyright year
 document.getElementById('copyright-year').textContent = new Date().getFullYear();
 
