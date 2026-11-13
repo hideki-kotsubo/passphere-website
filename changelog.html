@@ -211,8 +211,14 @@
             <p class="cl-toc-title">Versions</p>
             <ol>
               <li>
-                <a href="#v1-1-2">
+                <a href="#v1-1-3">
                   <span class="cl-toc-dot cl-toc-dot--current"></span>
+                  v1.1.3
+                </a>
+              </li>
+              <li>
+                <a href="#v1-1-2">
+                  <span class="cl-toc-dot"></span>
                   v1.1.2
                 </a>
               </li>
@@ -252,10 +258,21 @@
           <!-- Entries -->
           <div class="cl-content">
 
+            <div class="cl-item" id="v1-1-3">
+              <div class="cl-item-meta">
+                <span class="cl-version">v1.1.3</span>
+                <span class="cl-badge cl-badge--current">Latest</span>
+                <span class="cl-date">November 2026</span>
+              </div>
+              <ul class="cl-changes">
+                <li><span class="change-tag change-tag--fix">Fix</span> A database upgrade could have wiped existing vaults and passwords - upgrades now only ever add new data, never touch what's already there</li>
+                <li><span class="change-tag change-tag--fix">Fix</span> Permanently deleting a vault now actually deletes its passwords too, instead of leaving them behind</li>
+              </ul>
+            </div>
+
             <div class="cl-item" id="v1-1-2">
               <div class="cl-item-meta">
                 <span class="cl-version">v1.1.2</span>
-                <span class="cl-badge cl-badge--current">Latest</span>
                 <span class="cl-date">September 2026</span>
               </div>
               <ul class="cl-changes">
