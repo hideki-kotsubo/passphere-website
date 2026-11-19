@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — Passphere</title>
+  <meta name="description" content="Passphere Terms of Service — the rules for using the Passphere password manager." />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .policy-hero {
+      padding: 4rem 0 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .policy-hero .policy-label {
+      font-size: .8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--accent);
+      margin-bottom: .75rem;
+    }
+    .policy-hero h1 {
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      font-weight: 700;
+      letter-spacing: -.03em;
+      margin-bottom: .75rem;
+    }
+    .policy-hero .policy-meta {
+      font-size: .875rem;
+      color: var(--text-muted);
+    }
+
+    .policy-body {
+      padding: 3rem 0 5rem;
+    }
+    .policy-layout {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    /* Sidebar TOC */
+    .policy-toc {
+      position: sticky;
+      top: 80px;
+    }
+    .policy-toc-title {
+      font-size: .75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--text-muted);
+      margin-bottom: .75rem;
+    }
+    .policy-toc ol {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .1rem;
+    }
+    .policy-toc ol li a {
+      display: block;
+      font-size: .82rem;
+      color: var(--text-muted);
+      padding: .35rem .5rem;
+      border-radius: 6px;
+      transition: color var(--transition), background var(--transition);
+      line-height: 1.4;
+    }
+    .policy-toc ol li a:hover {
+      color: var(--accent);
+      background: var(--accent-light);
+    }
+
+    /* Content */
+    .policy-content {
+      min-width: 0;
+    }
+    .policy-section {
+      margin-bottom: 3rem;
+      scroll-margin-top: 80px;
+    }
+    .policy-section h2 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -.02em;
+      margin-bottom: 1rem;
+      padding-bottom: .6rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .policy-section p {
+      font-size: .9rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: .85rem;
+    }
+    .policy-section p:last-child { margin-bottom: 0; }
+    .policy-section p strong { color: var(--text); }
+    .policy-section ul {
+      list-style: disc;
+      padding-left: 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      margin-bottom: .85rem;
+    }
+    .policy-section ul li {
+      font-size: .9rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .policy-section ul li strong { color: var(--text); }
+
+    .policy-highlight {
+      background: var(--accent-light);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+    .policy-highlight p {
+      color: var(--accent-dark) !important;
+      font-weight: 500;
+      margin-bottom: 0 !important;
+    }
+
+    @media (max-width: 768px) {
+      .policy-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .policy-toc { position: static; }
+      .policy-hero { padding: 2.5rem 0 2rem; }
+      .policy-body { padding: 2rem 0 3.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="logo" aria-label="Passphere home">
+        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+        </svg>
+        <span class="logo-text"><span class="logo-pass">Pass</span><span class="logo-sphere">phere</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="index.html#faq">FAQ</a>
+      </nav>
+      <a href="https://pwa.passphere.app" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Try Free</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="policy-hero">
+      <div class="container">
+        <p class="policy-label">Legal</p>
+        <h1>Terms of Service</h1>
+        <p class="policy-meta">Effective November 18, 2026</p>
+      </div>
+    </div>
+
+    <div class="policy-body">
+      <div class="container">
+        <div class="policy-layout">
+
+          <!-- Table of Contents -->
+          <aside class="policy-toc" aria-label="Table of contents">
+            <p class="policy-toc-title">Contents</p>
+            <ol>
+              <li><a href="#who-we-are">1. Who We Are</a></li>
+              <li><a href="#service">2. The Service</a></li>
+              <li><a href="#eligibility">3. Who Can Use Passphere</a></li>
+              <li><a href="#your-data">4. Your Data and Master Password</a></li>
+              <li><a href="#sync">5. Device Sync</a></li>
+              <li><a href="#acceptable-use">6. Acceptable Use</a></li>
+              <li><a href="#purchases">7. Purchases and Refunds</a></li>
+              <li><a href="#our-rights">8. Our Rights</a></li>
+              <li><a href="#stores">9. Apple and Google</a></li>
+              <li><a href="#changes-service">10. Changes to the Service</a></li>
+              <li><a href="#warranty">11. No Warranty</a></li>
+              <li><a href="#liability">12. Limitation of Liability</a></li>
+              <li><a href="#law">13. Governing Law and Disputes</a></li>
+              <li><a href="#changes-terms">14. Changes to These Terms</a></li>
+              <li><a href="#contact">15. Contact</a></li>
+            </ol>
+          </aside>
+
+          <!-- Content -->
+          <div class="policy-content">
+
+            <div class="policy-section" id="who-we-are">
+              <h2>1. Who We Are and What These Terms Cover</h2>
+              <div class="policy-highlight">
+                <p>In short: Passphere stores your passwords encrypted on your own devices. We never see them and cannot recover them. Keep your master password safe, and back up your vault.</p>
+              </div>
+              <p>These Terms of Service ("Terms") apply to the Passphere iOS app, the Passphere Android app, the Passphere web app at <strong>pwa.passphere.app</strong>, and the website at <strong>passphere.app</strong> (together, the "Service").</p>
+              <p>Passphere is operated by <strong>Hideki Kotsubo</strong> (legal name Christian Hideki Kotsubo), a sole proprietor based in Vancouver, British Columbia, Canada ("we", "us", "our").</p>
+              <p>By using the Service, you agree to these Terms. Our <a href="privacy.html" style="color: var(--accent);">Privacy Policy</a> is part of these Terms. If you do not agree, please do not use the Service.</p>
+            </div>
+
+            <div class="policy-section" id="service">
+              <h2>2. The Service</h2>
+              <p>Passphere is a zero-knowledge, offline-first password manager. It lets you store passwords, usernames, URLs and notes in one or more encrypted vaults on your device.</p>
+              <ul>
+                <li><strong>No account.</strong> Passphere does not require you to sign up, and we do not run any server that stores your vaults.</li>
+                <li><strong>Local encryption.</strong> Your vault is encrypted on your device with a key derived from your master password.</li>
+                <li><strong>Optional sync.</strong> You can sync vaults directly between your own devices (see section 5).</li>
+              </ul>
+              <p>Passphere helps you manage your credentials. It does not guarantee the security of the third-party accounts those credentials belong to.</p>
+            </div>
+
+            <div class="policy-section" id="eligibility">
+              <h2>3. Who Can Use Passphere</h2>
+              <p>You must be at least 13 years old, or the minimum age of digital consent where you live, to use the Service. If you are under the age of majority where you live, you need permission from a parent or guardian, and they agree to these Terms on your behalf.</p>
+            </div>
+
+            <div class="policy-section" id="your-data">
+              <h2>4. Your Data and Master Password</h2>
+              <p><strong>You own your data.</strong> Everything you put in Passphere belongs to you. Your vault data stays on your devices, so we never receive it, store it or process it.</p>
+              <p><strong>You are responsible for your master password.</strong> Because Passphere is zero-knowledge:</p>
+              <ul>
+                <li>We cannot see, reset or recover your master password.</li>
+                <li>If you forget your master password, your vault cannot be decrypted by anyone, including us. This is by design.</li>
+                <li>You are responsible for keeping your master password and your unlocked devices secure.</li>
+              </ul>
+              <p><strong>Back up your vault.</strong> Your data lives only on your devices. It can be permanently lost if a device is lost, damaged or reset, the app is uninstalled, or browser or app storage is cleared. Please export an encrypted backup regularly and keep it somewhere safe. We cannot restore lost data.</p>
+            </div>
+
+            <div class="policy-section" id="sync">
+              <h2>5. Device Sync</h2>
+              <p>Sync is optional and works peer-to-peer between your own devices. Quick Sync uses a third-party signalling service (PeerJS) only to set up a direct connection. Offline Sync works without any network. Data is encrypted before it leaves your device.</p>
+              <p>Sync depends on your devices, your network and third-party services that we do not control. We do not guarantee that sync will always be available or that it will never cause conflicts or data loss. Keep a backup before syncing.</p>
+            </div>
+
+            <div class="policy-section" id="acceptable-use">
+              <h2>6. Acceptable Use</h2>
+              <p>You agree not to:</p>
+              <ul>
+                <li>use the Service to break the law, or to help anyone else do so;</li>
+                <li>store or use credentials to access accounts or systems you are not authorised to access;</li>
+                <li>interfere with, overload or disrupt the Service or the services it relies on;</li>
+                <li>copy, modify, reverse engineer, redistribute or resell the Service, except where the law allows it.</li>
+              </ul>
+            </div>
+
+            <div class="policy-section" id="purchases">
+              <h2>7. Purchases and Refunds</h2>
+              <ul>
+                <li><strong>Web app.</strong> The web app (PWA) is free.</li>
+                <li><strong>iOS and Android apps.</strong> These are sold as a one-time purchase per platform. The price is shown on the App Store or Google Play before you buy. There is no subscription and no in-app purchase.</li>
+                <li><strong>Payments.</strong> Purchases are processed by Apple or Google. We never see your payment details.</li>
+                <li><strong>Refunds.</strong> Refunds follow the policy of the store you bought from (<a href="https://support.apple.com/en-us/118223" target="_blank" rel="noopener" style="color: var(--accent);">Apple</a> or <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener" style="color: var(--accent);">Google Play</a>) and any rights you have under the law where you live.</li>
+                <li><strong>Updates.</strong> Updates are included in your purchase at no extra cost. We will not charge again for features you already paid for.</li>
+              </ul>
+            </div>
+
+            <div class="policy-section" id="our-rights">
+              <h2>8. Our Rights</h2>
+              <p>We own the Passphere name, logo, apps, website, design and code. We give you a personal, non-exclusive, non-transferable licence to use the Service for your own password management, under these Terms.</p>
+              <p>If you send us feedback or suggestions, we may use them freely, without payment or credit to you.</p>
+            </div>
+
+            <div class="policy-section" id="stores">
+              <h2>9. Apple and Google</h2>
+              <p>If you got Passphere from the Apple App Store or Google Play:</p>
+              <ul>
+                <li>These Terms are between you and us, not Apple or Google. We alone are responsible for the app and its content, maintenance and support.</li>
+                <li>Apple and Google have no obligation to provide maintenance or support for the app.</li>
+                <li>If the app fails to meet a warranty that applies, you may notify Apple, and Apple may refund the purchase price. Apple has no other warranty obligation for the app.</li>
+                <li>We, not Apple or Google, are responsible for handling any claims about the app, including product liability claims, claims that it fails to meet legal or regulatory requirements, consumer protection claims and intellectual property infringement claims.</li>
+                <li>You must also follow the terms of the store you used.</li>
+                <li>Apple and its subsidiaries are third-party beneficiaries of these Terms and may enforce them against you.</li>
+                <li>You confirm that you are not in a country under a U.S. government embargo and are not on any U.S. government list of prohibited or restricted parties.</li>
+              </ul>
+            </div>
+
+            <div class="policy-section" id="changes-service">
+              <h2>10. Changes to the Service and Ending It</h2>
+              <p>We may add, change or remove features over time. Because your data is stored on your devices, the app keeps working with your existing vault even if we stop releasing updates. If we ever stop offering Passphere, we will try to give at least 30 days' notice so you can export your data.</p>
+              <p>You can stop using Passphere at any time by deleting the app or clearing its data. Sections 4, 8, 11, 12 and 13 continue to apply after you stop using the Service.</p>
+            </div>
+
+            <div class="policy-section" id="warranty">
+              <h2>11. No Warranty</h2>
+              <p>To the extent the law allows, the Service is provided <strong>"as is" and "as available"</strong>. We do not promise that it will be uninterrupted, error-free or fit for any particular purpose, that it is free of security vulnerabilities, or that your data will never be lost or corrupted.</p>
+            </div>
+
+            <div class="policy-section" id="liability">
+              <h2>12. Limitation of Liability</h2>
+              <p>To the extent the law allows, we are not liable for any indirect, incidental, special or consequential losses. We are also not liable for lost profits, lost data, a forgotten master password, or unauthorised access to your accounts caused by a compromised device or a disclosed master password.</p>
+              <p>Our total liability for any claim relating to the Service is limited to the greater of the amount you paid for Passphere in the 12 months before the claim or CAD $50.</p>
+              <p>Nothing in these Terms limits liability that cannot be limited by law, such as liability for fraud, or for death or personal injury caused by negligence.</p>
+            </div>
+
+            <div class="policy-section" id="law">
+              <h2>13. Governing Law and Disputes</h2>
+              <p>These Terms are governed by the laws of the Province of British Columbia and the federal laws of Canada that apply there. Disputes will be decided by the courts of British Columbia.</p>
+              <p>If you are a consumer, you keep any protections given to you by the law of your country of residence that cannot be waived by agreement, including the right to bring a claim in your local courts.</p>
+              <p>If you have a problem, please email us first. Most issues can be solved quickly that way.</p>
+            </div>
+
+            <div class="policy-section" id="changes-terms">
+              <h2>14. Changes to These Terms</h2>
+              <p>We may update these Terms from time to time. When we do, we will post the new version on this page and update the effective date. For material changes, we will also mention them in the app's changelog before they take effect. If you keep using the Service after the changes take effect, you accept the updated Terms. If you do not agree, please stop using the Service.</p>
+              <p>If any part of these Terms is found unenforceable, the rest still applies. If we do not enforce a provision now, we can still enforce it later.</p>
+            </div>
+
+            <div class="policy-section" id="contact">
+              <h2>15. Contact</h2>
+              <p>If you have questions about these Terms, please contact:</p>
+              <p>
+                <strong>Hideki Kotsubo</strong><br>
+                Creator of Passphere<br>
+                Vancouver, British Columbia, Canada<br>
+                <a href="mailto:contact@passphere.app" style="color: var(--accent);">contact@passphere.app</a>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="logo logo--footer" aria-label="Passphere home">
+        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <span class="logo-text"><span class="logo-pass">Pass</span><span class="logo-sphere">phere</span></span>
+      </a>
+      <p class="footer-copy">&copy; <span id="copyright-year"></span> Passphere by Hideki Kotsubo. All rights reserved.</p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="https://pwa.passphere.app" target="_blank" rel="noopener">Web App</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="mailto:contact@passphere.app">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
